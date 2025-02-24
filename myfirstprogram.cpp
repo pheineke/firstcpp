@@ -6,6 +6,7 @@
 using namespace std;
 
 unsigned int microseconds = 10000;
+unsigned int familiarity_maggie = 0;
 
 int getInput();
 void output(string in, string menu);  // Funktion deklariert
@@ -48,16 +49,19 @@ void greet() {
 	
 	switch(user_input) {
 	case 0:
-		answer = "0";
+		answer = "*Maggie smiles* You're in art class right? I saw you at the blackboard searching for this course.'";
+		familiarity_maggie += 5;
 		break;
 	case 1:
 		answer = "Right right, im with you in art class!\n"
 				 "I saw you searching your name on the blackboard for the art course.\n"
 				 "Thought i'd say hi... i dont really know anybody here so...\n";
+		familiarity_maggie += 2;
 		break;
 	case 2:
 		answer = "Okay...so youre not talking with me.. alright...\n"
 				 "Something wrong today?\n";
+			 
 		break;
 	default:
 		answer = "0";
